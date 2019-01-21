@@ -55,6 +55,51 @@ namespace WebApplication1.Tests.Controllers
         }
 
         [TestMethod]
+        public void Calculate_ShouldAddTwoNumbers()
+        {
+            // Arrange
+            ValuesController controller = new ValuesController();
+            int a = 2;
+            int b = 10;
+            string op = "+";
+            // Act
+            int result = controller.Calculate(a, b, op);
+            int expected = a + b;
+            // Assert
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void Calculate_ShouldDetectWrongOperand()
+        {
+            // Arrange
+            ValuesController controller = new ValuesController();
+            int a = 39;
+            int b = 10;
+            string op = "*";
+            // Act
+            int result = controller.Calculate(a, b, op);
+            int expected = 0;
+            // Assert
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void Calculate_ShouldDetectInvalidInputs()
+        {
+            // Arrange
+            ValuesController controller = new ValuesController();
+            int a = -10;
+            int b = 10;
+            string op = "-";
+            // Act
+            int result = controller.Calculate(a, b, op);
+            int expected = 0;
+            // Assert
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
         public void Put()
         {
             // Arrange

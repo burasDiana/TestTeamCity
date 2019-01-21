@@ -21,6 +21,23 @@ namespace WebApplication1.Controllers
             return "value";
         }
 
+        public int Calculate(int a, int b, string op)
+        {
+            if (a != b && a != -b && b != -a)
+            {
+                if (op.Equals("+"))
+                {
+                    return a + b;
+                }
+                else if (op.Equals("-"))
+                {
+                    return a - b;
+                }
+            }
+
+            return 0; //means the wrong operand was inserted, or the if checks were violated
+        }
+        
         // POST api/values
         public void Post([FromBody]string value)
         {
