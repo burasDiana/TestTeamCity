@@ -1,4 +1,6 @@
 # TestTeamCity
+Build Status
+[![Build Status](https://travis-ci.org/burasDiana/TestTravisCI.svg?branch=master)](https://travis-ci.org/burasDiana/TestTravisCI)
 
 This project was created to show Continuous Integration of .Net Web project using TeamCity.
 
