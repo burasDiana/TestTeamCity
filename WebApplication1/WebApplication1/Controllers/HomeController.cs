@@ -14,5 +14,11 @@ namespace WebApplication1.Controllers
 
             return View();
         }
+
+        
+        public ActionResukt IndexTest()
+        {
+            return View();
+        }
     }
 }
