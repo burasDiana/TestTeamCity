@@ -29,7 +29,8 @@ namespace WebApplication1.Controllers
                 {
                     return a + b;
                 }
-                else if (op.Equals("-"))
+
+                if (op.Equals("-"))
                 {
                     return a - b;
                 }
