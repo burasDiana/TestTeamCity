@@ -100,22 +100,6 @@ namespace WebApplication1.Tests.Controllers
         }
 
         [TestMethod]
-        public void Calculate_ShouldDetectInvalidInputs2()
-        {
-            // Arrange
-            ValuesController controller = new ValuesController();
-            int a = 1 / 2;
-            int b = 10;
-            string op = "%";
-            // Act
-            int result = controller.Calculate(a, b, op);
-            int expected = 0;
-            // Assert
-            Assert.AreEqual(expected, result);
-        }
-
-
-        [TestMethod]
         public void Put()
         {
             // Arrange
