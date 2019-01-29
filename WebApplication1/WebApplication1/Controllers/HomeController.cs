@@ -16,9 +16,14 @@ namespace WebApplication1.Controllers
         }
 
         
-        public ActionResukt IndexTest()
+        public ActionResult IndexTest()
         {
             return View();
+        }
+
+        public int onePlusTwo(int one, int two)
+        {
+            return one + two;
         }
     }
 }

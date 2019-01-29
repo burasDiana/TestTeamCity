@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WebApplication1;
 using WebApplication1.Controllers;
 
+
 namespace WebApplication1.Tests.Controllers
 {
     [TestClass]
@@ -20,6 +21,15 @@ namespace WebApplication1.Tests.Controllers
             // Assert
             Assert.IsNotNull(result);
             Assert.AreEqual("Home Page", result.ViewBag.Title);
+            
+        }
+
+        [TestMethod]
+        public void TestOnePlusTwo()
+        {
+            HomeController controller = new HomeController();
+            int result = controller.onePlusTwo(1, 2);
+            Assert.AreEqual(3, result);
         }
     }
 }
