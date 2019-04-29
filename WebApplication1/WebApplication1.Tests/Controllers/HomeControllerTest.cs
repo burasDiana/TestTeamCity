@@ -29,7 +29,7 @@ namespace WebApplication1.Tests.Controllers
         {
             HomeController controller = new HomeController();
             int result = controller.onePlusTwo(1, 2);
-            Assert.AreEqual(4, result);
+            Assert.AreEqual(3, result);
         }
     }
 }
